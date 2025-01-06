@@ -15,5 +15,6 @@ Then run `bash make.sh` to build.
 
 ## TODOs:
   - [ ] Add a toggle to enable and a button to set the tool to anything.
+  - [ ] Pick a name for the extension so it's not different on every file!!!
   - [ ] Set up an autobuild.
   - [ ] Remove unnecessary logs and clean up the code.
