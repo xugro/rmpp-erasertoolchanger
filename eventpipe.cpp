@@ -185,7 +185,12 @@ void processEvents(std::vector<input_event> &packet, int &pipewriteFD /*for writ
 	}
 
 	//should not get here
-	std::cerr << "\033[0;31mpen_eraser\033[0m: invalid state in pen_eraser\n";
+	std::cerr << "\033[0;31mpen_eraser\033[0m: invalid state in pen_eraser, resetting state\n";
+
+	real_BTN_TOOL_RUBBER = 0;
+	real_BTN_TOOL_PEN = 0;
+	fake_BTN_TOOL_RUBBER = 0;
+	fake_BTN_TOOL_PEN = 0;
 
 
 	return;
