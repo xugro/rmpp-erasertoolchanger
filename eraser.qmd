@@ -1,0 +1,43 @@
+AFFECT [[2719823753422213979]]
+	TRAVERSE [[14888501028015932088]]
+		LOCATE AFTER [[1351197801288086424]]
+		INSERT {
+			signal toggleEraserOverrideEnabled
+			signal setEraserOverrideTool
+		}
+	
+	END TRAVERSE
+END AFFECT
+AFFECT [[2857280009207495592]]
+	IMPORT QtQuick.Layouts 1.0
+	IMPORT net.xugro.EraserHandler 1.0
+	TRAVERSE [[254501108490678590]]
+		LOCATE BEFORE [[7081293658967]]#[[8400129146313518801]]
+		INSERT {
+			EraserHandler {
+				~&5972374&~: eraserHandler
+				property ~&6502786168&~ eraserTool: ~&8399436595340057472&~
+				property ~&6502786168&~ ~&16536305558369217168&~: ~&6504117156&~
+				onEraserDown: {
+					~&16536305558369217168&~ = ~&6504254477&~.~&16536305558369217168&~;
+					~&6504254477&~.~&16536305558369217168&~ = eraserTool;
+				}
+				onEraserUp: {
+					~&6504254477&~.~&16536305558369217168&~ = ~&16536305558369217168&~;
+				}
+				~&254480451320573660&~.~&495334332051582499&~: {
+					/*need some slot to have a reference to this object from C++*/
+					/*also having the override thread start after this could work*/
+					~&233724020023100&~.~&6504419009&~("the toolbar is loaded");
+					eraserHandler.~&254525456392492198&~();
+				}
+			}
+		}
+	END TRAVERSE
+	TRAVERSE [[254501108490678590]] > [[7081293658967]]#[[1353514032786382195]] > [[14919350785992095439]]#[[16536698194431353583]]
+		LOCATE AFTER ALL
+		INSERT {
+		
+		}
+	END TRAVERSE
+END AFFECT

@@ -1,0 +1,21 @@
+version	0.1.0
+
+
+;condition    	_ZN3csl10devicelock10DeviceLockC1Ev
+import?		qt-resource-rebuilder$qmldiff_add_external_diff
+import		fileman$registerOverride
+import		open
+import		close
+resource	eraserDiff:eraser.qmd
+
+modulebase	main.cpp
+file		eventpipe.cpp
+copy		eraser.qmd
+
+copy		file.h
+copy		debug.h
+copy		fileman.h
+copy		eventpipe.h
+copy		eraserplus.pro
+copy 		eraserhandler.cpp
+copy		eraserhandler.h
